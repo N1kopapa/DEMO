@@ -1,0 +1,129 @@
+<!-- 纯css魔方 -->
+<html>
+<!-- 外层边界 -->
+<div class="wrap">
+    <!-- 外层 -->
+    <div class="box">
+        <!-- 大正方形 -->
+        <div class="center"></div>
+        <div class="out out_front">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+        <div class="out out_back">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+        <div class="out out_left">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+        <div class="out out_right">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+        <div class="out out_top">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+        <div class="out out_bottom">
+            <img src="https://github.githubassets.com/images/modules/dashboard/universe-satellite.png" class="pic"
+                alt="">
+        </div>
+    </div>
+</div>
+
+</html>
+<style>
+    .wrap {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 0 auto;
+        top: 400px;
+    }
+
+    .box {
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg) rotateY(-80deg);
+        animation: rotate linear 20s infinite;
+    }
+
+    @-webkit-keyframes rotate {
+        0% {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+        }
+
+        100% {
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg)
+        }
+    }
+
+    .out {
+        position: absolute;
+        opacity: .8;
+        transition: all .4s;
+    }
+
+    .pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .center {
+        width: 10px;
+        background: #4016d8;
+        box-shadow: 8px 8px 8px 8px #533e9e;
+        border-radius: 50%;
+        position: relative;
+        transform: translateX(90px) translateY(90px)  translateZ(0px);
+    }
+
+    .out_front {
+        transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .out_back {
+        transform: translateZ(-100px) rotateY(180deg);
+    }
+
+    .out_left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .out_right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .out_top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .out_bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .box:hover .out_front {
+        transform: rotateY(0deg) translateZ(180px);
+    }
+
+    .box:hover .out_back {
+        transform: translateZ(-180px) rotateY(180deg);
+    }
+
+    .box:hover .out_left {
+        transform: rotateY(-90deg) translateZ(180px);
+    }
+
+    .box:hover .out_right {
+        transform: rotateY(90deg) translateZ(180px);
+    }
+
+    .box:hover .out_top {
+        transform: rotateX(90deg) translateZ(180px);
+    }
+
+    .box:hover .out_bottom {
+        transform: rotateX(-90deg) translateZ(180px);
+    }
+</style>
