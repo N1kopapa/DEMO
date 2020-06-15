@@ -12,3 +12,7 @@
 ### 3、动态登录页
 
 ![mark](http://img.cdn.tsuzx.cn/hexo_admin/20200615/1hqL01yqv8lL.gif)
+
+### 4、防抖 节流
+
+![mark](http://img.cdn.tsuzx.cn/hexo_admin/20200615/TkLOLw96cqTQ.gif)
