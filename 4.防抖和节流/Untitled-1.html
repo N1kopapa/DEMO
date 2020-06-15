@@ -1,0 +1,95 @@
+<!--
+ * @version: 1.0.0
+ * @Author: zx  
+ * @Date: 2020-04-24 15:03:17
+ -->
+<div class="box">
+    <div id="content">
+    </div>
+    <div id="content1">
+    </div>
+    <div id="content2">
+    </div>
+</div>
+<script>
+    let num = 1;
+    let num1 = 1;
+    let num2 = 1;
+
+    let content = document.getElementById('content');
+    let content1 = document.getElementById('content1');
+    let content2 = document.getElementById('content2');
+
+    function move() {
+        content.innerHTML = num++;
+    }
+    function move1() {
+        content1.innerHTML = num1++;
+    }
+    function move2() {
+        content2.innerHTML = num2++;
+    }
+    content.onmousemove = throttle1(move, 1000)
+    content1.onmousemove = throttle(move1, 1000)
+    content2.onmousemove = debounce(move2, 1000)
+    function throttle1(func, wait) {
+        var timeout;
+        var previous = 0;
+
+        return function () {
+            context = this;
+            args = arguments;
+            if (!timeout) {
+                timeout = setTimeout(function () {
+                    timeout = null;
+                    func.apply(context, args)
+                }, wait)
+            }
+        }
+    }
+    function debounce(func, wait) {
+        let timeout;
+        return function () {
+            let context = this;
+            let args = arguments;
+
+            if (timeout) clearTimeout(timeout);
+
+            timeout = setTimeout(() => {
+                func.apply(context, args)
+            }, wait);
+        }
+    }
+    function throttle(func, wait) {
+        var context, args;
+        var previous = 0;
+
+        return function () {
+            var now = +new Date();
+            context = this;
+            args = arguments;
+            if (now - previous > wait) {
+                func.apply(context, args);
+                previous = now;
+            }
+        }
+    }
+</script>
+
+<style>
+    .box{
+        display: flex;
+    }
+    .box>div {
+        flex: 1;
+        margin: 20px;
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: rgb(134, 70, 70);
+        font-size: 80px;
+        font-weight: 200;
+    }
+</style>
