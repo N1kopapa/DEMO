@@ -16,3 +16,15 @@
 ### 4、防抖 节流
 
 ![mark](http://img.cdn.tsuzx.cn/hexo_admin/20200615/TkLOLw96cqTQ.gif)
+
+### 5、Vue-router
+
+https://www.jianshu.com/p/89dfaa2b7d16
+
+
+### 6、鼠标监听事件特效
+
+![mark](http://img.cdn.tsuzx.cn/hexo_admin/20200619/BYAGlR5H72By.gif)
+
+
+
