@@ -34,4 +34,4 @@ https://www.jianshu.com/p/89dfaa2b7d16
 
 ### 10.this指向问题
 
-![mark](https://github.com/N1kopapa/DEMO/tree/master/10.this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98)
+[this指向的理解](https://github.com/N1kopapa/DEMO/tree/master/10.this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98)
